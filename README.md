@@ -13,7 +13,7 @@ To run the code,
 python main.py --test_data_path './Dataset/test/' --working_directory './data/'
 ```
 
-'test_data_path' is the location of the test blur frames
+'test_data_path' is the location of the test input blur frames
 ```
 ├──── Dataset/
    ├──── Video0/
@@ -40,3 +40,15 @@ python main.py --test_data_path './Dataset/test/' --working_directory './data/'
         └──── ...
      ├──── ...
 ```
+
+## Reference
+```bibtex
+@inproceedings{sim2019deep,
+  title={A Deep Motion Deblurring Network Based on Per-Pixel Adaptive Kernels With Residual Down-Up and Up-Down Modules},
+  author={Sim, Hyeonjun and Kim, Munchurl},
+  booktitle={Proceedings of the IEEE Conference on Computer Vision and Pattern Recognition Workshops},
+  year={2019}
+}
+```
+## Contact
+Please send me an email, flhy5836@kaist.ac.kr

@@ -17,20 +17,22 @@ with geometric self-ensemble (takes much more time),
 python main.py --test_data_path './Dataset/test/' --working_directory './data/' --ensemble
 ```
 
-`test_data_path` is the location of the test input blur frames
+`test_data_path` is the location of the test input blur frames,
 ```
 ├──── Dataset/
-   ├──── Video0/
-      ├──── 0000.png
-      ├──── 0001.png
-      └──── ...
-   ├──── Video1/
-      ├──── 0000.png
-      ├──── 0001.png
-      └──── ...
-   ├──── ...
+   ├──── test/
+      ├──── blur/
+        ├──── Video0/
+           ├──── 0000.png
+           ├──── 0001.png
+           └──── ...
+        ├──── Video1/
+           ├──── 0000.png
+           ├──── 0001.png
+           └──── ...
+        ├──── ...
 ```
-`working_directory` is the location of the deblurred output frames.
+`working_directory` is the location of the deblurred output frames,
 ```
 ├──── data/
    ├──── test/
@@ -45,6 +47,22 @@ python main.py --test_data_path './Dataset/test/' --working_directory './data/' 
      ├──── ...
 ```
 
+## Evaluation
+
+```
+├──── Dataset/
+   ├──── test/
+      ├──── **sharp**/
+        ├──── Video0/
+           ├──── 0000.png
+           ├──── 0001.png
+           └──── ...
+        ├──── Video1/
+           ├──── 0000.png
+           ├──── 0001.png
+           └──── ...
+        ├──── ...
+```
 ## Reference
 ```bibtex
 @inproceedings{sim2019deep,

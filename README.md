@@ -9,12 +9,12 @@ A source code of the 3rd winner of NTIRE 2019 Video Deblurring Challenge (*CVPRW
 ## Testing with pretrained model
 We provide the test model with checkpoint in '/checkpoint/' in this repo.
 To run the code, 
-'''python
+```python
 python main.py --test_data_path './Dataset/test/' --working_directory './data/'
-'''
+```
 
 'test_data_path' is the location of the test blur frames
-'''
+```
 ├──── Dataset/
    ├──── Video0/
       ├──── 0000.png
@@ -25,9 +25,9 @@ python main.py --test_data_path './Dataset/test/' --working_directory './data/'
       ├──── 0001.png
       └──── ...
    ├──── ...
-'''
+```
 'working_directory' is the location of the deblurred output frames.
-'''
+```
 ├──── data/
    ├──── test/
      ├──── Video0/
@@ -39,4 +39,4 @@ python main.py --test_data_path './Dataset/test/' --working_directory './data/'
         ├──── 0001.png
         └──── ...
      ├──── ...
-'''
+```

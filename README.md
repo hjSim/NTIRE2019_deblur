@@ -10,17 +10,17 @@ A source code of the 3rd winner of NTIRE 2019 Video Deblurring Challenge (*CVPRW
 We provide the test model with checkpoint in `/checkpoints/` in this repo.
 To run the code, 
 ```bash
-python main.py --test_data_path './Dataset/test/' --working_directory './data/'
+python main.py --test_data_path './Dataset/YOUR_TEST/' --working_directory './data/'
 ```
 with geometric self-ensemble (takes much more time), 
 ```bash
-python main.py --test_data_path './Dataset/test/' --working_directory './data/' --ensemble
+python main.py --test_data_path './Dataset/YOUR_TEST/' --working_directory './data/' --ensemble
 ```
 
 `test_data_path` is the location of the test input blur frames,
 ```
 ├──── Dataset/
-   ├──── test/
+   ├──── YOUR_TEST/
       ├──── blur/
         ├──── Video0/
            ├──── 0000.png
@@ -32,7 +32,7 @@ python main.py --test_data_path './Dataset/test/' --working_directory './data/' 
            └──── ...
         ├──── ...
 ```
-`working_directory` is the location of the deblurred output frames,
+The deblurred output frames will be generated in `working_directory` as,
 ```
 ├──── data/
    ├──── test/
@@ -47,12 +47,16 @@ python main.py --test_data_path './Dataset/test/' --working_directory './data/' 
      ├──── ...
 ```
 
-## Evaluation
-
+### Evaluation
+To calcuate PSNR between the deblurred output and the corresponding sharp frames,
+```bash
+python main.py --phase 'psnr'
+```
+Before that, the corresponding sharp frames should be located as,
 ```
 ├──── Dataset/
-   ├──── test/
-      ├──── **sharp**/
+   ├──── YOUR_TEST/
+      ├──── sharp/
         ├──── Video0/
            ├──── 0000.png
            ├──── 0001.png
@@ -63,6 +67,7 @@ python main.py --test_data_path './Dataset/test/' --working_directory './data/' 
            └──── ...
         ├──── ...
 ```
+
 ## Reference
 ```bibtex
 @inproceedings{sim2019deep,

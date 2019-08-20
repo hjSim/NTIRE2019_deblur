@@ -9,13 +9,13 @@ class DeblurData():
 		self.test_dataset = args.test_dataset
 		self.channels = args.channels
 		
-		src_test = os.path.join(self.test_dataset,'*')
+		src_test = os.path.join(self.test_dataset,'blur/*')
 		self.list_test = glob.glob(src_test)
 
 		self.list_test.sort()
 		self.num_test = 0
 		for i in self.list_test:
-			self.num_test += len(glob.glob(os.path.join(i,'blur/*')))
+			self.num_test += len(glob.glob(os.path.join(i,'*')))
 
 		print('Load all files list')    
 		print("# test imgs : {} ".format(self.num_test))

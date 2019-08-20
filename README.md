@@ -2,6 +2,9 @@
 A source code of the 3rd winner of NTIRE 2019 Video Deblurring Challenge (*CVPRW*, 2019) : 
 "A Deep Motion Deblurring Network based on Per-Pixel Adaptive Kernels with Residual Down-Up and Up-Down Modules" by Hyeonjun Sim and Munchurl Kim. [[pdf](http://openaccess.thecvf.com/content_CVPRW_2019/papers/NTIRE/Sim_A_Deep_Motion_Deblurring_Network_Based_on_Per-Pixel_Adaptive_Kernels_CVPRW_2019_paper.pdf)], [[NTIRE2019](http://www.vision.ee.ethz.ch/ntire19/)]
 
+![example](/img.png)\
+Examples of deblurring results on GOPRO dataset. (a) Input blurry image ; (b) Result of Tao *et al.* [2] ; (c) Result of our proposed network ; (d) Clean image.
+
 ## Prerequisites
 * python 2.7
 * tensorflow (gpu version) >= 1.6 (The runtime in the paper was recorded on tf 1.6. But the code in this repo also runs in tf 1.13 )
@@ -78,8 +81,6 @@ For GOPRO benchmark test dataset,
 | Tao *et al.* [2] | 30.26 | 0.9342 |
 | Ours | **31.34** | **0.9474** |
 
-![example](/img.png)\
-Examples of deblurring results on GOPRO dataset. (a) Input blurry image; (b) Result of Tao *et al.* [2]; (c) Result of our proposed network; (d) Clean image.
 
 ## Reference
 ```bibtex

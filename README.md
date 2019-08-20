@@ -73,7 +73,7 @@ Our NTIRE model had yielded average 33.86 and 33.38 dB PSNR for 300 validation f
 For GOPRO benchmark test dataset,
 
 | Method | PSNR(dB) | SSIM |
-| ------ | -------- | ---- |
+| :----: | :------: | :----: |
 | Nah *et al.* [1] | 28.62 | 0.9094 |
 | Tao *et al.* [2] | 30.26 | 0.9342 |
 | Ours | **31.34** | **0.9474** |

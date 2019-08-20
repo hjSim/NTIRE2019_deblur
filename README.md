@@ -78,6 +78,8 @@ For GOPRO benchmark test dataset,
 | Tao *et al.* [2] | 30.26 | 0.9342 |
 | Ours | **31.34** | **0.9474** |
 
+![example](/img.png)
+Examples of deblurring results on GOPRO dataset. (a) Input blurry image; (b) Result of Tao *et al.* [2]; (c) Result of our proposed network; (d) Clean image.
 
 ## Reference
 ```bibtex

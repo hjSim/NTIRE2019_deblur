@@ -71,12 +71,12 @@ Before that, the corresponding sharp frames should follow the format:,
 ```
 Our NTIRE model had yielded average 33.86 and 33.38 dB PSNR for 300 validation frames with and without self-ensemble, respectively.\
 For GOPRO benchmark test dataset,
-Method | PSNR(dB) | SSIM
----|---|---
-Nah et al. | 28.62 | 0.9094
-Tao et al. | 30.26 | 0.9342
----|---|---
-Ours | 31.34 | 0.9474
+| Method | PSNR(dB) | SSIM |
+|---|---|---|
+|Nah et al. | 28.62 | 0.9094|
+|Tao et al. | 30.26 | 0.9342|
+|---|---|---|
+|Ours | 31.34 | 0.9474|
 
 
 ## Reference

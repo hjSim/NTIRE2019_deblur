@@ -4,10 +4,10 @@ A source code of the 3rd winner of NTIRE 2019 Video Deblurring Challenge (*CVPRW
 
 ## Prerequisites
 * python 2.7
-* tensorflow (gpu version) >= 1.6 (The runtime in the paper was based on tf 1.6. But the code in this repo also runs in tf 1.13 )
+* tensorflow (gpu version) >= 1.6 (The runtime in the paper was recorded on tf 1.6. But the code in this repo also runs in tf 1.13 )
 
 ## Testing with pretrained model
-We provide the test model with checkpoint in `/checkpoints/` in this repo.
+We provide the two test models depending on the training datasets, NTIRE(REDS[[pdf](http://openaccess.thecvf.com/content_CVPRW_2019/papers/NTIRE/Nah_NTIRE_2019_Challenge_on_Video_Deblurring_and_Super-Resolution_Dataset_and_CVPRW_2019_paper.pdf)],[[page](https://seungjunnah.github.io/Datasets/reds)]) and GOPRO([[pdf](http://openaccess.thecvf.com/content_cvpr_2017/papers/Nah_Deep_Multi-Scale_Convolutional_CVPR_2017_paper.pdf)],[[page](https://github.com/SeungjunNah/DeepDeblur_release)]) with checkpoint in `/checkpoints_NTIRE/`, `/checkpoints_GOPRO/`, respectively, in this repo.
 To run the code, 
 ```bash
 python main.py --test_data_path './Dataset/YOUR_TEST/' --working_directory './data/'

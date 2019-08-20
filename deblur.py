@@ -196,7 +196,7 @@ class Deblur():
 			if not os.path.exists(vid_folder):
 				os.makedirs(vid_folder)
 
-			test_frs = glob.glob(os.path.join(test_vid,'blur/*'))
+			test_frs = glob.glob(os.path.join(test_vid,'*'))
 			test_frs.sort()
 			num_test_fr = len(test_frs)
 			# test_fr_cnt = 9 # Start from '00000009.png', output every 10 frames (setting for NTIRE 2019)

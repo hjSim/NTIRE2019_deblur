@@ -7,11 +7,9 @@ A source code of the 3rd winner of NTIRE 2019 Video Deblurring Challenge (*CVPRW
 * tensorflow (gpu version) >= 1.6 (The runtime in the paper was recorded on tf 1.6. But the code in this repo also runs in tf 1.13 )
 
 ## Testing with pretrained model
-We provide the two test models depending on the training datasets, *NTIRE* (REDS [[pdf](http://openaccess.thecvf.com/content_CVPRW_2019/papers/NTIRE/Nah_NTIRE_2019_Challenge_on_Video_Deblurring_and_Super-Resolution_Dataset_and_CVPRW_2019_paper.pdf)], [[page](https://seungjunnah.github.io/Datasets/reds)]) and *GOPRO* ([[pdf](http://openaccess.thecvf.com/content_cvpr_2017/papers/Nah_Deep_Multi-Scale_Convolutional_CVPR_2017_paper.pdf)], [[page](https://github.com/SeungjunNah/DeepDeblur_release)]) with checkpoint in `/checkpoints_NTIRE/`, `/checkpoints_GOPRO/`, respectively.
-
-For NTIRE REDS dataset, our model was trained on the 'blur' and 'sharp' pair.
-
-For GOPRO dataset, our model was trained on the lineared blur (not gamma corrected) and sharp pair (as other state-of-the-art methods did).
+We provide the two test models depending on the training datasets, REDS (NTIRE2019 Video Deblurring Challenge:Track 1 Clean dataset [[pdf](http://openaccess.thecvf.com/content_CVPRW_2019/papers/NTIRE/Nah_NTIRE_2019_Challenge_on_Video_Deblurring_and_Super-Resolution_Dataset_and_CVPRW_2019_paper.pdf)], [[page](https://seungjunnah.github.io/Datasets/reds)]) and *GOPRO* ([[pdf](http://openaccess.thecvf.com/content_cvpr_2017/papers/Nah_Deep_Multi-Scale_Convolutional_CVPR_2017_paper.pdf)], [[page](https://github.com/SeungjunNah/DeepDeblur_release)]) with checkpoint in `/checkpoints_NTIRE/`, `/checkpoints_GOPRO/`, respectively. Download link to [/checkpoints_NTIRE/](https://www.dropbox.com/s/5uguucc85d0dn1d/checkpoints_NTIRE.zip?dl=0) and [/checkpoints_GOPRO/](https://www.dropbox.com/s/v6rj0cz3ix8vcx7/checkpoints_GOPRO.zip?dl=0)
+For NTIRE REDS dataset, our model was trained on the 'blur' and 'sharp' pair.\
+For GOPRO dataset, our model was trained on the lineared blur (not gamma corrected) and sharp pair (as other state-of-the-art methods did).\
 For example, to run the test model pretrained on GOPRO dataset, 
 ```bash
 python main.py --pretrained_dataset 'GOPRO' --test_dataset './Dataset/YOUR_TEST/' --working_directory './data/'

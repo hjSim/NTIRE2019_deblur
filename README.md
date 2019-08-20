@@ -74,9 +74,9 @@ For GOPRO benchmark test dataset,
 
 | Method | PSNR(dB) | SSIM |
 | ------ | -------- | ---- |
-| Nah et al. | 28.62 | 0.9094 |
-| Tao et al. | 30.26 | 0.9342 |
-| Ours | 31.34 | 0.9474 |
+| Nah et al.[1] | 28.62 | 0.9094 |
+| Tao et al.[2] | 30.26 | 0.9342 |
+| Ours | *31.34* | *0.9474* |
 
 
 ## Reference
@@ -90,3 +90,7 @@ For GOPRO benchmark test dataset,
 ```
 ## Contact
 Please send me an email, flhy5836@kaist.ac.kr
+
+## Reference
+[1] Seungjun Nah, Tae Hyun Kim, and Kyoung Mu Lee. Deepmulti-scale convolutional neural network for dynamic scenedeblurring. InProceedings of the IEEE Conference on Com-puter Vision and Pattern Recognition, pages 3883–3891,2017
+[2]  Xin Tao, Hongyun Gao, Xiaoyong Shen, Jue Wang, and Ji-aya Jia. Scale-recurrent network for deep image deblurring.InProceedings of the IEEE Conference on Computer Visionand Pattern Recognition, pages 8174–8182, 2018

@@ -76,7 +76,6 @@ For GOPRO benchmark test dataset,
 | ------ | -------- | ---- |
 | Nah et al. | 28.62 | 0.9094 |
 | Tao et al. | 30.26 | 0.9342 |
-| ---- | ----- | ------ |
 | Ours | 31.34 | 0.9474 |
 
 

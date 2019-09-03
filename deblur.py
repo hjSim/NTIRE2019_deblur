@@ -89,7 +89,7 @@ class Deblur():
 
 
 	def make_indicies(self, B, H, W):
-		
+		# Not used in the new version
 		# B, H, W = self.batch_size, self.patch_size, self.patch_size
 		k = self.kernel_size
 		d = 1
@@ -131,7 +131,8 @@ class Deblur():
 
 		return tf.stack([b, y_lin, x_lin], 4)
 
-	def local_conv(self, img, kernel_2d):
+	def local_conv_original(self, img, kernel_2d):
+		# The original version of the local convolution implementation in the refered paper, associated with self.make_indicies().
 		# img (B, H, W, 3)
 		# kernel_2d (B, H, W, k)
 
@@ -145,7 +146,23 @@ class Deblur():
 		
 		return result
 
+	def local_conv(self, img, kernel_2d):
+		# A new version local convolution implementation. Faster than the original one.
+		# img (B, H, W, 3)
+		# kernel_2d (B, H, W, k)
 
+		# Convolve with kernel_2d
+		k = self.kernel_size
+		_, h, w, c = tf.unstack(tf.shape(img))
+		result = tf.image.extract_image_patches(img, ksizes=(1,k,k,1), strides=(1,1,1,1),rates=(1,1,1,1), padding="SAME") # Output [B, H, W, k*k*c]
+		result = tf.reshape(result,[-1, h, w, k*k, c]) # Output [B, H, W, k*k, c]
+		kernel_2d = tf.expand_dims(kernel_2d, axis=-1) # (B, H, W, k*k, 1). Because of the RGB dimension
+		result = tf.multiply(result,kernel_2d) # Elementwise multiplication. Resulting (B, H, W, k*k, 3)
+		result = tf.reduce_sum(result,axis=3) # (B, H, W, 3)
+		
+		return result
+	
+	
 	def build_model(self, args):
 		data = DeblurData(args)
 	
@@ -157,7 +174,7 @@ class Deblur():
 				self.train_blur_frames = tf.placeholder(tf.float32, (1, 1, None, None, self.channels))
 				self.train_blur = self.train_blur_frames[:,0,:]
 			self.list_test = data.list_test
-			self.indices = self.make_indicies(B = 1, H = tf.shape(self.train_blur)[1], W = tf.shape(self.train_blur)[2])
+# 			self.indices = self.make_indicies(B = 1, H = tf.shape(self.train_blur)[1], W = tf.shape(self.train_blur)[2])
 		
 		with tf.variable_scope("separable_conv", reuse = tf.AUTO_REUSE):
 			if args.pretrained_dataset == 'NTIRE':

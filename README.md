@@ -4,7 +4,7 @@
    * We also provide our model output images of benchmark datasets; GOPRO and REDS(NTIRE,2019). Please refer to [below](#Testing-with-pretrained-model)
 
 A source code of the 3rd winner of NTIRE 2019 Video Deblurring Challenge (*CVPRW*, 2019) : 
-"A Deep Motion Deblurring Network based on Per-Pixel Adaptive Kernels with Residual Down-Up and Up-Down Modules" by Hyeonjun Sim and Munchurl Kim. [[pdf](http://openaccess.thecvf.com/content_CVPRW_2019/papers/NTIRE/Sim_A_Deep_Motion_Deblurring_Network_Based_on_Per-Pixel_Adaptive_Kernels_CVPRW_2019_paper.pdf)], [[NTIRE2019](http://www.vision.ee.ethz.ch/ntire19/)]
+"A Deep Motion Deblurring Network based on Per-Pixel Adaptive Kernels with Residual Down-Up and Up-Down Modules" by [Hyeonjun Sim](https://sites.google.com/view/hjsim) and Munchurl Kim. [[pdf](http://openaccess.thecvf.com/content_CVPRW_2019/papers/NTIRE/Sim_A_Deep_Motion_Deblurring_Network_Based_on_Per-Pixel_Adaptive_Kernels_CVPRW_2019_paper.pdf)], [[NTIRE2019](http://www.vision.ee.ethz.ch/ntire19/)]
 
 ![example](/img.png)\
 Examples of deblurring results on GOPRO dataset. (a) Input blurry image ; (b) Result of Tao *et al.* [2] ; (c) Result of our proposed network ; (d) Clean image.
